@@ -10,7 +10,7 @@ import { Message } from './utils/message-model';
 export class AppComponent {
   formGroup = new FormGroup({
     text: new FormControl(null, Validators.required),
-    // author: new FormControl(null, Validators.required),
+    author: new FormControl(null, Validators.required),
   });
 
   messages: Message[];
@@ -24,7 +24,7 @@ export class AppComponent {
 
   send() {
     this.messages.push({
-      // Author: this.formGroup.controls.author.value,
+      Author: this.formGroup.controls.author.value,
       Text: this.formGroup.controls.text.value,
       Date: new Date(Date.now()),
     });
