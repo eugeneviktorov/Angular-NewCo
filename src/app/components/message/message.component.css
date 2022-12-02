@@ -1,0 +1,9 @@
+.message{
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 3px;
+}
+.message-container{
+  margin-top: 0.7em;
+  margin-bottom: 0.5em;
+}
