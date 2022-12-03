@@ -1,9 +1,11 @@
 <app-message *ngFor="let message of messages"
-  >{{ message.Author }} / {{ message.Text }} / [{{ message.Date | date: 'mm:ss' }}]</app-message
+  >{{ message.Author }} / {{ message.Text }} / [{{
+    message.Date | date: 'mm:ss'
+  }}]</app-message
 >
 
 <form [formGroup]="formGroup" (submit)="send()">
-  <input formControlNameAuthor="text" type="text" placeholder="Ваше имя" />
+  <input formControlName="author" type="text" placeholder="Ваше имя" />
   <input formControlName="text" type="text" placeholder="Сообщение" />
   <button type="submit" [attr.disabled]="formGroup.valid ? null : 1">
     Отправить
