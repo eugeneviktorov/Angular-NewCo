@@ -28,6 +28,7 @@ export class AppComponent {
       Text: this.formGroup.controls.text.value,
       Date: new Date(Date.now()),
     });
+    // this.formGroup.reset({text});
     this.formGroup.reset();
   }
 }
